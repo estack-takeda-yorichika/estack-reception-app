@@ -37,22 +37,34 @@
     .page.active { display: flex; }
 
     /* ===== ヘッダー ===== */
+    .home-header {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      white-space: nowrap;
+    }
     .logo-img {
       height: 72px;
       width: auto;
       object-fit: contain;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
     .logo-name {
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 38px;
+      font-weight: 800;
       color: #1a1a1a;
       letter-spacing: 1px;
-      margin-bottom: 4px;
+      margin-bottom: 0;
     }
     .welcome {
-      font-size: 20px;
+      font-size: 24px;
       color: var(--sub);
+      margin-top: 16px;
       margin-bottom: 48px;
     }
 
@@ -227,8 +239,10 @@
 
 <!-- ===== ホーム ===== -->
 <div id="page-home" class="page active">
-  <img class="logo-img" src="logo.png" alt="eSTACK ロゴ">
-  <div class="logo-name">eSTACK株式会社</div>
+  <div class="home-header">
+    <img class="logo-img" src="logo.png" alt="eSTACK ロゴ">
+    <div class="logo-name">eSTACK株式会社</div>
+  </div>
   <div class="welcome">ようこそ。ご用件を選んでください。</div>
 
   <button class="main-btn btn-delivery" onclick="goPage('page-delivery')">
